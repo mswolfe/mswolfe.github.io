@@ -39,7 +39,7 @@ Don't forget to clean up the branches in 'shelveset\\&lt;user.name&gt;' on the r
 Automating shelvesets in GIT
 ----------------------------
 
-One of the great things about GIT is that it is extensible and I've created a GIT command to do all of the steps listed above.  Download the git-shelveset script from the [git-shelveset](https://github.com/mswolfe/git-shelveset) repository and place it in the GIT installation folder that contains all of your GIT sub-commands.  My GIT sub-command folder is located at C:\Program Files (x86)\Git\libexec\git-core because I installed GIT as a standalone application from [https://git-scm.com/downloads](https://git-scm.com/downloads).
+One of the great things about GIT is that it is extensible and I've created a GIT command to do all of the steps listed above.  Download the git-shelveset script from the [git-shelveset](https://github.com/mswolfe/git-utils/blob/master/git-shelveset) repository and place it in the GIT installation folder that contains all of your GIT sub-commands.  My GIT sub-command folder is located at C:\Program Files (x86)\Git\libexec\git-core because I installed GIT as a standalone application from [https://git-scm.com/downloads](https://git-scm.com/downloads).
 
 Now, in a GIT command prompt you should be able to issue the following commands:
 
