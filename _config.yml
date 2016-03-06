@@ -14,16 +14,10 @@ baseurl:          /
 
 author:
   name:           'Michael Wolfe'
-  url:            https://twitter.com/mwooolfe
+  github_user:    mswolfe
+  twitter_user:   mwooolfe
 
 paginate:         5
 paginate_path: 	  "page:num"
 
-# Custom vars
-version:          2.1.0
-
-github:
-  repo:           https://github.com/mswolfe
-
 gems: [jekyll-paginate]
- # This will require each of these gems automatically.
