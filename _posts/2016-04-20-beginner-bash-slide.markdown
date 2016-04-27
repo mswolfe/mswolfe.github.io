@@ -13,7 +13,7 @@ categories: presentation bash beginner
 2. What is Bash?
 3. Moving around
 4. Viewing files
-5. Creating and Deleting files
+5. Managing files
 6. Editing files
 7. Searching files
 9. But how do I...
@@ -53,63 +53,79 @@ to be precise.<!-- .element: class="fragment" -->
 <section data-markdown data-separator-notes="^Note:">
 <script type="text/template">
 ## Moving around
-Ughh...I have to navigate the file system with only a console and a keyboard.
+Ughh...I have to navigate the file system with only a keyboard.
 <div>
 Yes, but it is not that bad when you have:
-* Tab completion
-* Shell expansion ('~' and '*')
-* history
-* alias
-</div> <!-- .element: class="fragment" -->
-Note:
-Show tab completion
-Explain how '~' is expanded to mean your home directory
-Explain how '*' is expanded to match things
-Explain command history and how to access it via the up arrow and the '!' character
-Explain how alias works, via alias ..="cd .."
-</script>
-</section>
-
-<section data-markdown data-separator-notes="^Note:">
-## Moving around
-In addition to those built in shell utilties you also have the following handy commands:
 * cd
 * ls
 * pwd
 * pushd
 * popd
+</div> <!-- .element: class="fragment" -->
 Note:
-Explain cd, ls, pwd, pushd, popd
+* cd, change directory
+* ls, list directory contents
+* pwd, print name of working directory
+* pushd/popd, push/pop directory.
+</script>
+</section>
+
+<section data-markdown data-separator-notes="^Note:">
+## Moving around
+In addition to those commands you also have the following handy built-in shell capabilities:
+* Tab completion
+* Shell expansion ('~' and '*')
+* Clicky-clicky
+* history
+* alias
+Note:
+* Show tab completion
+* '~' = home directory, cd ~
+* '*' = match anything, ls receip*
+* Selection with copy to clipboard, so left double click selects and copies, middle click will paste
+* history command and how to access it via the up arrow and the '!' character
+* alias (known under another name), via 'alias ..="cd .."'
 </section>
 
 <section data-markdown data-separator-notes="^Note:">
 ## Viewing files
 * cat
-* less
 * more
+* less
 * tail and it's super useful -f argument
 Note:
-Show how to use cat, less, more, tail -f
+* cat, concatenate file onto standard out
+* more, file perusal filter
+* less, opposite of more .. LESS IS MORE!
+* tail, output the last part of a file
 </section>
 
 <section data-markdown data-separator-notes="^Note:">
-## Creating and Deleting files
+## Managing files
 * touch
+* cp
+* mv
 * rm
 * mkdir (-p)
 * rmdir (rm -rf)
 Note:
-Show how to use touch, rm, mkdir, rmdir.  Make sure to show rm using more than one file.
+* touch, update timestamp and create
+* cp, copy
+* mv, move
+* rm, remove files, can delete multi files at once.
+* mkdir, -p = make parent directory as needed
+* rmdir, not used much because of rm -r(recursive)f(force)
 </section>
 
 <section data-markdown data-separator-notes="^Note:">
 ## Editing files
 * nano
-* pico
 * emacs
 * vi
 Note:
-I will not go into these, but one is obviously better than the others.
+* These are your available editors.
+* I will not go into these, but one is obviously better than the others.
+* nano is very simple!
 </section>
 
 <section data-markdown data-separator-notes="^Note:">
@@ -117,7 +133,8 @@ I will not go into these, but one is obviously better than the others.
 * find
 * grep
 Note:
-Show off find and grep
+* find --type f --name bob
+* grep -r(recursive) regex [files]
 </section>
 
 <section data-markdown data-separator-notes="^Note:">
@@ -142,21 +159,30 @@ $ man man
 </section>
 
 <section data-markdown>
-<script type="text/template">
+<script type="text/template" data-separator-notes="^Note:">
 # Variables
+BASH
 <pre><code data-trim>
-#!/bin/bash
 FOO="foo"
 echo $FOO
 </code></pre>
+<div>
+CMD PROMPT
+<pre><code data-trim>
+set FOO="foo"
+echo %FOO%
+</code></pre>
+</div> <!-- .element: class="fragment" -->
+Note:
+Do you know what variables in cmd prompt look like?
 </script>
 </section>
 
 <section data-markdown>
-<script type="text/template">
+<script type="text/template" data-separator-notes="^Note:">
 # Conditionals
+BASH
 <pre><code data-trim>
-#!/bin/bash
 FOO="foo"
 if [ "$FOO" = "foo" ]; then
    echo There seems to be a foo in your foo!
@@ -164,35 +190,74 @@ else
    echo Awwww, fooey!
 fi
 </code></pre>
+<div>
+CMD PROMPT
+<pre><code data-trim>
+IF %FOO% == "foo" (
+   echo Why is my conditional delimited by a parenthesis?
+) ELSE ( 
+   echo This is not the foo you are looking for!
+)
+</code></pre>
+</div> <!-- .element: class="fragment" -->
+Note:
+Do you know what conditionals in cmd prompt look like?
 </script>
 </section>
 
 <section data-markdown>
-<script type="text/template">
+<script type="text/template" data-separator-notes="^Note:">
 # Loops
+BASH
 <pre><code data-trim>
-#!/bin/bash
 for i in $( ls foo* ); do
-	echo I found a foo called: $i
+	echo I found a file called: $i
 done
 </code></pre>
+<div>
+CMD PROMPT
+<pre><code data-trim>
+for %%G in (foo1.txt foo2.txt) do (
+	echo I found a file called: %%G
+)
+</pre></code>
+</div> <!-- .element: class="fragment" -->
+Note:
+Do you know what loops in cmd prompt look like?
 </script>
 </section>
 
 <section data-markdown>
-<script type="text/template">
+<script type="text/template" data-separator-notes="^Note:">
 # Functions
+BASH
 <pre><code data-trim>
-#!/bin/bash
 function foo {
-	echo Mamma didnt raise no foo!
+	echo Mamma didnt raise no $1!
 }
+foo "bar"
 </code></pre>
-Invoking foo is as easy as:
+<div>
+CMD PROMPT
 <pre><code data-trim>
-$ foo
-Mamma didnt raise no foo!
+@echo Off
+setlocal EnableDelayedExpansion
+call :foo "bar"
+exit /b
+
+:foo
+setlocal
+echo Mamma didnt raise no %~1
+endlocal
+goto:eof
 </code></pre>
+</div> <!-- .element: class="fragment" -->
+Note:
+* Do you know what functions are in cmd prompt?  They are GOTOS!
+* EnabledDelayedExpansion allows for loops to evaluate variables are runtime....as opposed to at interpertation.
+* exit /b says exit the script and not the console...yeah...you can kill the console that some poor guy started.
+* setlocal limits variables to the function scope, instead of global...global as in console global.
+* goto:eof actually jumps to the end of the label and is how you end a function...
 </script>
 </section>
 
@@ -240,6 +305,27 @@ ls receipts* | grep -e VISA | sort
 Note:
 Lists all files starting with "receipts" that contain the word VISA in order.  This is in essence an application.
 </script>
+</section>
+
+<section data-markdown data-separator-notes="^Note:">
+<script 	type="text/template">
+## Why are you telling me this?
+<div>
+Imagine a world where:
+</div> <!-- .element: class="fragment" data-fragment-index="1" -->
+<div>
+* every business requirement was written by a developer <!-- .element: class="fragment" data-fragment-index="2" -->
+* every product owner that could not code was chased out of the building <!-- .element: class="fragment" data-fragment-index="3" -->
+* the user interface is 100% functionally complete <!-- .element: class="fragment" data-fragment-index="4" -->
+</div>
+Note:
+* What if i need to run this as a batch job?  What if I want to run this as a test?
+* the user interface is at the tips of your fingers.
+</script>
+</section>
+
+<section data-markdown data-separator-notes="^note:">
+### Welcome to *nix where your dreams really can come true!
 </section>
 
 <section data-markdown data-separator-notes="^Note:">
