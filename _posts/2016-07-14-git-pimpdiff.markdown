@@ -40,3 +40,13 @@ Finally, I configured GIT to use diff-so-fancy as my pager so that every diff lo
 # Diff Everything
 
 It's pretty easy, but those few steps above made a huge difference in my command line diffing.  I barely use my difftool anymore because these command line diffs are so gorgeous!
+
+Checkout the difference those minor tweaks can make to your command line diff below:
+
+First, here is a plain diff with no modifications: ![Plain GIT diff]({{site.baseurl}}public/git-pimpdiff/PlainDiffNoHeuristic.png)
+
+Second, here is a diff with the compaction heuristic enabled: ![GIT diff with compaction heuristic]({{site.baseurl}}public/git-pimpdiff/PlainDiffWithHeuristic.png)
+
+Third, here is the same diff with compaction heuristic and diff-so-fancy installed: ![GIT diff with compaction heuristic and diff-so-fancy]({{site.baseurl}}public/git-pimpdiff/DiffSoFancy.png)
+
+Lastly, here is a bonus shot of diff-so-fancy where it is highlighting the exact characters on the line that changed; very fancy: ![GIT diff with diff-so-fancy showing off character differences]({{site.baseurl}}public/git-pimpdiff/DiffSoFancy2.png)
