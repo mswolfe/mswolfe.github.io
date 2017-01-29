@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Pointers"
+date:   2017-01-28 17:50:00 -0800
+categories: pointers
+---
+
+I ran across this reddit post a few years back and it provided an amazing description of pointers.  I just wanted a place to keep it safe so i would never lose it!
+
+https://www.reddit.com/r/learnprogramming/comments/1ehg69/explain_pointers_like_im_five
+
+and the comment: https://www.reddit.com/r/learnprogramming/comments/1ehg69/explain_pointers_like_im_five/ca0a5l7/
+
+Quote:
+[–]munificent 218 points 3 years ago 
+(I'm going to elide the byte/word distinction for simplicity here.)
+Imagine all of your memory as a big sheet of graph paper. Each square represents one unit of memory. Starting at the top left, you can count squares. So "1" is the first square, "2" is the next and so on. Using this, you can uniquely identify each square on the sheet. If someone says, "Hey, what's square 5", you can find it.
+This is each square's address. An address is a number that identifies a location in memory.
+Because these squares represent memory, you can store stuff in them. You can write a little number in each one. If you want to store 3 in memory, you write that in a square. Every variable in your program will get assigned a square where it stores its value. When you do:
+a = 123;
+The compiler knows what square is owned by a (determining this is, in fact, part of a compiler's job) so it turns this into code that writes "123" on that square.
+Note that squares hold numbers, and addresses are numbers too. This means you can put a number in a square that represents the address of another number.
+That's a pointer. A pointer is a variable whose value is an address. (Some people don't distinguish clearly between "address" and "pointer" but I think it's clearer to keep them separate.)
