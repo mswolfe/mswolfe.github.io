@@ -5,45 +5,51 @@ date:   2017-01-28 17:50:00 -0800
 categories: pointers
 ---
 
-A few months ago I was trying to explain pointers to a friend that was taking a beginning level computer science class.  I remembered an old [reddit post](https://www.reddit.com/r/learnprogramming/comments/1ehg69/explain_pointers_like_im_five/ca0a5l7/) that did an amazing job of distilling pointer's down to their core concept and explained it beautifully to a beginner.  I want to capture that reddit comment here so i would alway be able to share it with friends.  Enjoy!
+A few months ago I was trying to explain pointers to a friend that was taking a beginning level computer science class.  I remembered an old [reddit post](https://www.reddit.com/r/learnprogramming/comments/1ehg69/explain_pointers_like_im_five/ca0a5l7/) that had an amazing comment that really distilled pointer's down to their core concept and explained it beautifully to a beginner.  I want to capture that reddit comment here so i will always be able to share it with friends.
 
 ## Explain pointer's like I am five
 
-Here is the full quote for reference, but I am going to break it down a bit more below to add some visual elements to it as well.
+Here is the full quote for reference.  I will try to break it down a bit more below and add some visual elements to it as well.
+
 > [–] [munificent](https://www.reddit.com/user/munificent) 218 points 3 years ago 
 > 
 > (I'm going to elide the byte/word distinction for simplicity here.)
+>
 > Imagine all of your memory as a big sheet of graph paper. Each square represents one unit of memory. Starting at the top left, you can count squares. So "1" is the first square, "2" is the next and so on. Using this, you can uniquely identify each square on the sheet. If someone says, "Hey, what's square 5", you can find it.
+>
 > This is each square's address. An address is a number that identifies a location in memory.
+>
 > Because these squares represent memory, you can store stuff in them. You can write a little number in each one. If you want to store 3 in memory, you write that in a square. Every variable in your program will get assigned a square where it stores its value. When you do:
+>
 > a = 123;
+>
 > The compiler knows what square is owned by a (determining this is, in fact, part of a compiler's job) so it turns this into code that writes "123" on that square.
-> Note that squares hold numbers, and addresses are numbers too. This means you can put a number in a square that represents the address of another number.
+>
+> Note that squares hold numbers, and addresses are numbers too. This means you can put a number in a square 
+that represents the address of another number.
+>
 > That's a pointer. A pointer is a variable whose value is an address. (Some people don't distinguish clearly between "address" and "pointer" but I think it's clearer to keep them separate.)
 
 Credit to reddit user [munificent](https://www.reddit.com/user/munificent) for the great explaination!
 
 ## Explain pointer's like I am five with diagrams
 
-> Imagine all of your memory as a big sheet of graph paper. Each square represents one unit of memory. Starting at the top left, you can count squares. So "1" is the first square, "2" is the next and so on. Using this, you can uniquely identify each square on the sheet. If someone says, "Hey, what's square 5", you can find it.
+Let me work through munificent's comment above with slightly different wording and some diagrams to help illustrate the point.  I will still be using much of the original wording because I quite liked it!
 
-Here's that big sheet of paper with all of the squares uniquely identified.  The square with the red outline is square 5!  We found it!
+Imagine all of your memory as a big sheet of graph paper and each square represents one unit of memory. ![Grid]({{site.baseurl}}public/pointers/grid.png)
 
-![Grid with addresses]({{site.baseurl}}public/pointers/grid_with_address.png)
+Let's count each square starting from the top left. ![Grid with addresses]({{site.baseurl}}public/pointers/grid_with_address.png)
 
-The number in the upper left of each square is that square's address.
+The numbers that we wrote in the upper left of each square is the address of that square.  The address is a unique identifier that helps us and the computer find that location.  It's similar to the address of where you live and how the postman uses your address to deliver your mail. ![Grid with addresses]({{site.baseurl}}public/pointers/grid_with_address_5.png)
 
-> An address is a number that identifies a location in memory.  Because these squares represent memory, you can store stuff in them. You can write a little number in each one. If you want to store 3 in memory, you write that in a square.
+We can store stuff in these squares because they represent memory.  Let's store the value '3' in address 5.  ![Grid with value in address 5]({{site.baseurl}}public/pointers/grid_with_value_in_5.png)
 
-Let's store the value '3' in address 5.  You can see that the square with address 5 now has the number '3' stored inside of it.
+You can see that the square with address 5 now has the number '3' stored inside of it.  Each square now has two things associated with it: an address and a value.  The address is used by the computer to find the location of the square so that it can use the value stored inside.  Do you notice anything interesting about the value that we are storing in the square?  The address of a square is a number and the value we store in the square is also a number!  This means you can put a number in a square that represents the address of another number.  Let's put the value '8' inside of the memory address 3 and see what that looks like.  ![Grid with value in address 3 and 5]({{site.baseurl}}public/pointers/grid_with_value_in_5_and_3.png)
 
-![Grid with value in address 5]({{site.baseurl}}public/pointers/grid_with_value_in_5.png)
+Now we have two memory addresses that have values stored in them, 3 and 5.  The interesting part is the value stored in memory address 5 is the value '3' which happens to be the address of a different memory address!  That's a pointer. A pointer is a variable whose value is an address. (Some people don't distinguish clearly between "address" and "pointer" but I think it's clearer to keep them separate.)
 
-> Every variable in your program will get assigned a square where it stores its value. When you do:
-> a = 123;
-> The compiler knows what square is owned by a (determining this is, in fact, part of a compiler's job) so it turns this into code that writes "123" on that square.
+When we store the memory address as a value inside of another memory address than we call that a pointer.  You can see that the memory address 5 is storing a pointer to the memory address 3 which is finally storing the value of '8'.  ![Grid with value in address 5 pointing to 3]({{site.baseurl}}public/pointers/grid_with_value_in_5_and_3_pointer.png)
 
-
-
+I didn't learn pointers with this explaination so perhaps it is a really terrible one, but I thought it was pretty great and wanted to keep it on my radar!
 
 Lastly, a special nod to [Binky](https://www.youtube.com/watch?v=6pmWojisM_E) who provides a very entertaining tutorial on pointers.
