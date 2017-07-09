@@ -11,6 +11,7 @@ tagline:          ''
 description:      ''
 url:              http://mswolfe.github.io
 baseurl:          /
+repository:	      mswolfe/mswolfe.github.io
 
 author:
   name:           'Michael Wolfe'
