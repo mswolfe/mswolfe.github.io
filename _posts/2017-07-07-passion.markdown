@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "Passion"
+date:   2017-07-07 20:30:00 -0800
+categories: passion work
+---
+
+There has been a lot of talk at my work this week about passion and it has gotten me thinking about what my passions are in life and how I share them with others.
+
+## What are my passions?
+
+When I was young I had a passion for math.  I remember dreaming of becoming a math teacher when I was in elementary school because I really enjoyed knowing that there was a right answer to the question.  Things were either right or wrong at that level of math, but as I grew older I realized that this is not always the case.  I then began exploring music and I dedicated my full attention to music throughout high school.  Through my experience with music I learned that I don't enjoy being the center of attention with the bright spot light directly upon me.  Finally, in college I found my way to computer science and this is where I found my true passion in life.  Don't misunderstand me...I am not claiming to be amazing, but I am claiming to love this field to the depths of my being.
+
+Throughout my life I have enjoyed many recreational activities like playing sports and video games, working on cars, going to the beach, watching movies, and reading books.  Most of those activities I thoroughly enjoy, but I wouldn't say I am passionate about them.  With the exception of reading books.  I can't thank my parents enough for showing me that the library and the used book store were always just a short trip away.  Reading always has been and always will be one of my greatest passions.
+
+Lastly, I now have a family and I realize that the love I have for my family is greater and stronger than any passion I've felt in my life previously.  Passion fails to communicate the feeling I have when I leave work to go home and play with my child.  Passion fails to describe the blissful joy I experience when I see my wife laugh.  Passion is like the sputtering flame of a match right before it is extinguished compared to the feeling of love that I experience on a daily basis.
+
+## What do I do with my passion?
+
+It is pretty obvious what I do with two of my passions in life: I read and I spend time with my family!  My passion for computer science does not present itself in such an obvious way.  Computer science is such a broad subject that it is very easy to find enjoyment in many different applications of it.  When I was younger I enjoyed video games and I would spend my free time learning about how video games were made.  I also spent time learning how to hack those video games with silly things like changing in-game text or failing to add bonuses into games (thanks to Game Genie for putting those ideas into my head).
+
+For a time, my friends and I enjoyed playing poker and I spent a summer building a plug-in based poker application.  My friends thought I was trying to build a poker tournament dashboard, but in reality, the project was spent learning the OSGi framework.  I've built iPhone and Android applications that are 95% complete and included ad based revenue.  I've built a RetroPi that I mounted within a gutted NES with working power and reset buttons.  I've built an OpenHAB automation system for my home with a Raspberry PI.  I've started countless projects that hardly go anywhere at all!
+
+This may sound like I am terrible at finishing projects, but in my eyes, I **did** finish all of those projects.  They may not have been 100% complete and shipped to a customer, but that was never the point.  I started all of these projects because of my passion for computer science.  In each one of these projects I wanted to learn something: OSGi framework, iPhone SDK, Android SDK, soldering, color theory, architectural design of a graphing library, and the underlying security concepts of a distributed system.  My passion for computer science stems from a deeper passion of learning.  I love learning about new frameworks, new libraries, and discovering new software architectures.
+
+## How do I show my passion?
+
+This is a difficult question for me to answer and I think it is something that a lot of developers might struggle with.  I go to work each day and I am passionate about the code that write.  I am passionate about creating the best system that I can which includes worrying about: design, troubleshooting, and maintainability.  I fight hard to do things the right way; the correct way.  If you work in a private business you understand that there is a give and take between doing something the right way and getting a product to market.  This battle is constantly raging and it makes for very tough decisions.
+
+My passion is easy to see if you are sitting right next to me.  You can see it when I get so excited about a new way to query the application logs that I interrupt my neighbor to show them what I've found.  You can see it when I use code reviews to nit-pick about code duplication or bad logging.  You can see it when I am asked a simple question about a variable name and it leads to a 45 minute discuss on the benefits of Java versus C#.
+
+To sum it all up, my passion is pretty hard to see unless you're working with me on a daily basis.  I like to share my passion and what it produces with my co-workers and the people I see every day.  They understand my accomplishments and they have their own projects that inspire me.  I don't share my projects with them to be the center of attention.  I don't share my projects with them to show off.  I share with them because I have a personal relationship with them as friends and they express interest and intrigue in what I do with my time.
+
+## Management wants to see my passion
+
+I think all management wants to have employees that are passionate about what they do.  They want to see their floor filled with people that care deeply about what they work on.  They want a culture where everyone breathes, sweats, and cries passion.  They want the best of the best working as hard as they can on a product that they care deeply about.  Most importantly, they want to **see** how much passion everyone has.
+
+How do I show management my passion when they never looked at a single code review?  How do I show management my passion when they are out of the country when I had that 45-minute discussion about C# versus Java?  How do I show management my passion when they are in a meeting with the senior leadership team as I shout with joy over the new log query I found?  I can't show them and I would never expect them to see these events because they are off doing their job as I do mine!
+
+If they happened to be walking by while I discovered something new I would be happy to show them, but that doesn't change the fact that I don't want to be the center of attention.  It won't change the fact that I don't want my name mentioned in front of all of the senior leadership of my company.  It won't change the fact that I don't want to be in a meeting with my CEO.  It won't change the fact that if my manager was amazed and wanted me to present something in front of other people I would happily turn them down unless they forced me to.
+
+## A note to my manager
+
+Just because you don't see passion doesn't mean it isn't there.  Just because no one is sharing their passion the same way you would share yours doesn't mean it isn't there.  Take a hard look around your floor next time before you start asking your team to show more passion.  It is probably there in ways you don't recognize because every single person on your floor is a different human being including yourself.
+
+Everyone has different passions in life.  Everyone has had different life experiences.  Everyone shares their passions in a different way.  Next time you don't see any passion on your floor perhaps you should take a step back and try to see things from a different perspective.  I bet you there is quite a bit of passion on your floor and it can be seen from some very surprising angles.
+
+I hope some of this really hits home because I'd hate for you to make a speech about the "lack of passion" to the team when there is so much passion everywhere just waiting to be seen.  I'd really hate for that speech to backfire and to be the reason why some of your most passionate employees find themselves in a deep quagmire of apathy and indifference.  Lastly, I hope you learn that many people don't want to be seen, but that doesn't make them any less passionate or valuable to the team.
