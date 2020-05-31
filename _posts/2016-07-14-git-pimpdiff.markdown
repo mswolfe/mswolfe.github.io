@@ -43,10 +43,10 @@ It's pretty easy, but those few steps above made a huge difference in my command
 
 Checkout the difference those minor tweaks can make to your command line diff below:
 
-First, here is a plain diff with no modifications: ![Plain GIT diff]({{site.baseurl}}public/git-pimpdiff/PlainDiffNoHeuristic.png)
+First, here is a plain diff with no modifications: ![Plain GIT diff](/public/git-pimpdiff/PlainDiffNoHeuristic.png)
 
-Second, here is a diff with the compaction heuristic enabled: ![GIT diff with compaction heuristic]({{site.baseurl}}public/git-pimpdiff/PlainDiffWithHeuristic.png)
+Second, here is a diff with the compaction heuristic enabled: ![GIT diff with compaction heuristic](/public/git-pimpdiff/PlainDiffWithHeuristic.png)
 
-Third, here is the same diff with compaction heuristic and diff-so-fancy installed: ![GIT diff with compaction heuristic and diff-so-fancy]({{site.baseurl}}public/git-pimpdiff/DiffSoFancy.png)
+Third, here is the same diff with compaction heuristic and diff-so-fancy installed: ![GIT diff with compaction heuristic and diff-so-fancy](/public/git-pimpdiff/DiffSoFancy.png)
 
-Lastly, here is a bonus shot of diff-so-fancy where it is highlighting the exact characters on the line that changed; very fancy: ![GIT diff with diff-so-fancy showing off character differences]({{site.baseurl}}public/git-pimpdiff/DiffSoFancy2.png)
+Lastly, here is a bonus shot of diff-so-fancy where it is highlighting the exact characters on the line that changed; very fancy: ![GIT diff with diff-so-fancy showing off character differences](/public/git-pimpdiff/DiffSoFancy2.png)

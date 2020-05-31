@@ -36,19 +36,19 @@ Credit to reddit user [munificent](https://www.reddit.com/user/munificent) for t
 
 Let me work through munificent's comment above with slightly different wording and some diagrams to help illustrate the point.  I will still be using much of the original wording because I quite liked it!
 
-Imagine all of your memory as a big sheet of graph paper and each square represents one unit of memory. ![Grid]({{site.baseurl}}public/pointers/grid.png)
+Imagine all of your memory as a big sheet of graph paper and each square represents one unit of memory. ![Grid](/public/pointers/grid.png)
 
-Let's count each square starting from the top left. ![Grid with addresses]({{site.baseurl}}public/pointers/grid_with_address.png)
+Let's count each square starting from the top left. ![Grid with addresses](/public/pointers/grid_with_address.png)
 
-The numbers that we wrote in the upper left of each square is the address of that square.  The address is a unique identifier that helps us and the computer find that location.  It's similar to the address of where you live and how the postman uses your address to deliver your mail. ![Grid with addresses]({{site.baseurl}}public/pointers/grid_with_address_5.png)
+The numbers that we wrote in the upper left of each square is the address of that square.  The address is a unique identifier that helps us and the computer find that location.  It's similar to the address of where you live and how the postman uses your address to deliver your mail. ![Grid with addresses](/public/pointers/grid_with_address_5.png)
 
-We can store stuff in these squares because they represent memory.  Let's store the value '3' in address 5.  ![Grid with value in address 5]({{site.baseurl}}public/pointers/grid_with_value_in_5.png)
+We can store stuff in these squares because they represent memory.  Let's store the value '3' in address 5.  ![Grid with value in address 5](/public/pointers/grid_with_value_in_5.png)
 
-You can see that the square with address 5 now has the number '3' stored inside of it.  Each square now has two things associated with it: an address and a value.  The address is used by the computer to find the location of the square so that it can use the value stored inside.  Do you notice anything interesting about the value that we are storing in the square?  The address of a square is a number and the value we store in the square is also a number!  This means you can put a number in a square that represents the address of another number.  Let's put the value '8' inside of the memory address 3 and see what that looks like.  ![Grid with value in address 3 and 5]({{site.baseurl}}public/pointers/grid_with_value_in_5_and_3.png)
+You can see that the square with address 5 now has the number '3' stored inside of it.  Each square now has two things associated with it: an address and a value.  The address is used by the computer to find the location of the square so that it can use the value stored inside.  Do you notice anything interesting about the value that we are storing in the square?  The address of a square is a number and the value we store in the square is also a number!  This means you can put a number in a square that represents the address of another number.  Let's put the value '8' inside of the memory address 3 and see what that looks like.  ![Grid with value in address 3 and 5](/public/pointers/grid_with_value_in_5_and_3.png)
 
 Now we have two memory addresses that have values stored in them, 3 and 5.  The interesting part is the value stored in memory address 5 is the value '3' which happens to be the address of a different memory address!  That's a pointer. A pointer is a variable whose value is an address. (Some people don't distinguish clearly between "address" and "pointer" but I think it's clearer to keep them separate.)
 
-When we store the memory address as a value inside of another memory address than we call that a pointer.  You can see that the memory address 5 is storing a pointer to the memory address 3 which is finally storing the value of '8'.  ![Grid with value in address 5 pointing to 3]({{site.baseurl}}public/pointers/grid_with_value_in_5_and_3_pointer.png)
+When we store the memory address as a value inside of another memory address than we call that a pointer.  You can see that the memory address 5 is storing a pointer to the memory address 3 which is finally storing the value of '8'.  ![Grid with value in address 5 pointing to 3](/public/pointers/grid_with_value_in_5_and_3_pointer.png)
 
 I didn't learn pointers with this explaination so perhaps it is a really terrible one, but I thought it was pretty great and wanted to keep it on my radar!
 
