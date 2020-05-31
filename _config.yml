@@ -21,6 +21,6 @@ author:
 paginate:         5
 paginate_path: 	  "page:num"
 
-include: [public, reveal.js]
+keep_files: [public, reveal.js]
 
 plugins: [jekyll-paginate]
