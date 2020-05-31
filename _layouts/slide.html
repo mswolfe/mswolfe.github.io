@@ -61,8 +61,8 @@
       </div>
     </div>
 
-    <script src="{{ "reveal.js/lib/js/head.min.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "reveal.js/js/reveal.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/reveal.js/lib/js/head.min.js" }}"></script>
+    <script src="{{ "/reveal.js/js/reveal.js" }}"></script>
     <script>
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
@@ -79,13 +79,13 @@
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: '{{ "reveal.js/lib/js/classList.js" | prepend: site.baseurl }}', condition: function() { return !document.body.classList; } },
-          { src: '{{ "reveal.js/plugin/markdown/marked.js" | prepend: site.baseurl }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: '{{ "reveal.js/plugin/markdown/markdown.js" | prepend: site.baseurl }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '{{ "/reveal.js/lib/js/classList.js" }}', condition: function() { return !document.body.classList; } },
+          { src: '{{ "/reveal.js/plugin/markdown/marked.js" }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '{{ "/reveal.js/plugin/markdown/markdown.js" }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           // condition didnt' work for highlight.js....it just never loaded.
-          { src: '{{ "reveal.js/plugin/highlight/highlight.js" | prepend: site.baseurl }}', callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: '{{ "reveal.js/plugin/zoom-js/zoom.js" | prepend: site.baseurl }}', async: true },
-          { src: '{{ "reveal.js/plugin/notes/notes.js" | prepend: site.baseurl }}', async: true }
+          { src: '{{ "/reveal.js/plugin/highlight/highlight.js" }}', callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '{{ "/reveal.js/plugin/zoom-js/zoom.js" }}', async: true },
+          { src: '{{ "/reveal.js/plugin/notes/notes.js" }}', async: true }
         ]
       });
 
